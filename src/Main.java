@@ -4,11 +4,11 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter x: ");
+        System.out.println("Введите x: ");
         double x = in.nextDouble();
-        System.out.println("Enter y: ");
+        System.out.println("Введите y: ");
         double y = in.nextDouble();
-        System.out.println("Enter command: ");
+        System.out.println("Save/Upload? ");
         String s = in.next();
 
         if (s.equals("Save"))
@@ -17,7 +17,7 @@ public class Main{
             {
                 Calc c = new Calc(x, y);
                 oos.writeObject(c);
-                System.out.println("Object saved");
+                System.out.println("Объект сохранен.");
             }
             catch (Exception ex)
             {
@@ -37,7 +37,7 @@ public class Main{
             }
         }
         else {
-            System.out.println("Unknown command");
+            System.out.println("Неизвестная команда.");
         }
     }
 }
